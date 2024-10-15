@@ -7,3 +7,9 @@ jobs:
     steps:
       - name: Testing
         run: echo "Hello world!"
+      - name: Accessing GitHub files
+        uses: actions/checkout@v3
+      - name: Puppeteer launch
+        run: |
+          npm i
+          node scripts/main.mjs
