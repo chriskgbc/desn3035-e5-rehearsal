@@ -1,11 +1,9 @@
 name: Puppeteer
 on:
-  workflow_run:
-    workflows: ["Deploy Next.js site to Pages"]
-    types: 
-      - completed
+  workflow_dispatch:
 jobs:
   check:
+    runs-on: ubuntu-latest
     steps:
       - name: Testing
         run: echo "Hello world!"
